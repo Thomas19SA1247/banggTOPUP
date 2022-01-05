@@ -61,6 +61,7 @@ namespace TopUp
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.buttonshow = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loginDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainBindingSource)).BeginInit();
@@ -325,6 +326,7 @@ namespace TopUp
             this.button1.TabIndex = 18;
             this.button1.Text = "PRINT PEMBAYARAN";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // label7
             // 
@@ -421,7 +423,7 @@ namespace TopUp
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Location = new System.Drawing.Point(390, 300);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(389, 91);
+            this.groupBox2.Size = new System.Drawing.Size(389, 103);
             this.groupBox2.TabIndex = 24;
             this.groupBox2.TabStop = false;
             // 
@@ -431,7 +433,7 @@ namespace TopUp
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(9, 19);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(374, 51);
+            this.dataGridView1.Size = new System.Drawing.Size(374, 66);
             this.dataGridView1.TabIndex = 0;
             // 
             // buttonshow
@@ -446,6 +448,10 @@ namespace TopUp
             this.buttonshow.Text = "SHOW";
             this.buttonshow.UseVisualStyleBackColor = false;
             this.buttonshow.Click += new System.EventHandler(this.buttonshow_Click);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
             // transaksi_form
             // 
@@ -513,5 +519,6 @@ namespace TopUp
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button buttonshow;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

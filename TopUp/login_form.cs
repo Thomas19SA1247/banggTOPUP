@@ -20,7 +20,6 @@ namespace TopUp
 
         private void login_form_Load(object sender, EventArgs e)
         {
-            pictureBox1.Image = Image.FromFile("../../img/DIVIS.png");
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -37,7 +36,7 @@ namespace TopUp
             }
             else
             {
-                MessageBox.Show("Username Or Passwoord Incorrect");
+                MessageBox.Show("Username Or Password Incorrect");
             }
 
 
