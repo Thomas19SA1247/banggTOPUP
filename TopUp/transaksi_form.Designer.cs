@@ -472,7 +472,7 @@ namespace TopUp
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "transaksi_form";
-            this.Text = "Form1";
+            this.Text = "transaction";
             this.Load += new System.EventHandler(this.transaksi_form_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
