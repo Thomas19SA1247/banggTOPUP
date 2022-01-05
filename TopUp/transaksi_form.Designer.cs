@@ -32,6 +32,7 @@ namespace TopUp
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.NamaGameTB = new System.Windows.Forms.ComboBox();
@@ -57,10 +58,9 @@ namespace TopUp
             this.mainBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mainTableAdapter = new TopUp.LoginDBDataSetTableAdapters.MainTableAdapter();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button4 = new System.Windows.Forms.Button();
+            this.buttonshow = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.loginDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainBindingSource)).BeginInit();
@@ -107,6 +107,19 @@ namespace TopUp
             this.groupBox1.Size = new System.Drawing.Size(372, 380);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button4.Location = new System.Drawing.Point(6, 312);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(79, 38);
+            this.button4.TabIndex = 23;
+            this.button4.Text = "BACK";
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // radioButton1
             // 
@@ -403,18 +416,6 @@ namespace TopUp
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(417, 259);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(82, 35);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "SHOW";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dataGridView1);
@@ -433,18 +434,18 @@ namespace TopUp
             this.dataGridView1.Size = new System.Drawing.Size(374, 51);
             this.dataGridView1.TabIndex = 0;
             // 
-            // button4
+            // buttonshow
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button4.Location = new System.Drawing.Point(6, 312);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(79, 38);
-            this.button4.TabIndex = 23;
-            this.button4.Text = "BACK";
-            this.button4.UseVisualStyleBackColor = false;
+            this.buttonshow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonshow.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonshow.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonshow.Location = new System.Drawing.Point(414, 271);
+            this.buttonshow.Name = "buttonshow";
+            this.buttonshow.Size = new System.Drawing.Size(75, 23);
+            this.buttonshow.TabIndex = 25;
+            this.buttonshow.Text = "SHOW";
+            this.buttonshow.UseVisualStyleBackColor = false;
+            this.buttonshow.Click += new System.EventHandler(this.buttonshow_Click);
             // 
             // transaksi_form
             // 
@@ -452,8 +453,8 @@ namespace TopUp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(821, 509);
+            this.Controls.Add(this.buttonshow);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.label9);
@@ -509,8 +510,8 @@ namespace TopUp
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button buttonshow;
     }
 }

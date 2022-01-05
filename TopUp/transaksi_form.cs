@@ -244,24 +244,7 @@ namespace TopUp
 
         private void button2_Click(object sender, EventArgs e)
         {
-            try
-            {
-                SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Lenovo\Desktop\TopUpApp\DB\LoginDB.mdf;Integrated Security=True;Connect Timeout=30");
-                sqlcon.Open();
-
-                SqlCommand cmd = new SqlCommand("INSERT INTO TableTRans(NamaGame,IdGame,Nominal,TotalHarga,KodePembayaran) VALUES('" + NamaGameTB.SelectedItem + "', @IdGame,@Nominal,@TotalHarga,@KodePembayaran)", sqlcon);
-                cmd.Parameters.AddWithValue("@IdGame", IdGameTB.Text);
-                cmd.Parameters.AddWithValue("@Nominal", comboBox1.Text);
-                cmd.Parameters.AddWithValue("@TotalHarga", textBox6.Text);
-                cmd.Parameters.AddWithValue("@KodePembayaran", textBox7.Text);
-                cmd.ExecuteNonQuery();
-                sqlcon.Close();
-                GetValue();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            
         }
 
 
@@ -292,6 +275,33 @@ namespace TopUp
             menu_form objmenu_form = new menu_form();
             this.Hide();
             objmenu_form.Show();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonshow_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SqlConnection sqlcon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Lenovo\Desktop\TopUpApp\DB\LoginDB.mdf;Integrated Security=True;Connect Timeout=30");
+                sqlcon.Open();
+
+                SqlCommand cmd = new SqlCommand("INSERT INTO TableTrans(NamaGame,IdGame,Nominal,TotalHarga,KodePembayaran) VALUES('" + NamaGameTB.SelectedItem + "', @IdGame,@Nominal,@TotalHarga,@KodePembayaran)", sqlcon);
+                cmd.Parameters.AddWithValue("@IdGame", IdGameTB.Text);
+                cmd.Parameters.AddWithValue("@Nominal", comboBox1.Text);
+                cmd.Parameters.AddWithValue("@TotalHarga", textBox6.Text);
+                cmd.Parameters.AddWithValue("@KodePembayaran", textBox7.Text);
+                cmd.ExecuteNonQuery();
+                sqlcon.Close();
+                GetValue();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
